@@ -1,0 +1,35 @@
+h1
+  {
+    text-align: center;
+  }
+#v, #a, #h
+  {
+    font-size:30px;   /* Czcionka w polach danych */
+    text-align: center;
+  }
+#velocityValue, #angleValue, #heightValue
+  {
+    position: absolute;
+    top:150px;        /* Położenie pól danych w pionie */
+    transform: translate(-50%, 0%);
+  }
+#velocityValue
+  {
+    left:24%;
+  }
+#angleValue
+  {
+    left:50%;
+  }
+#heightValue
+  {
+    left:76%;
+  }
+#throwButton
+  {
+    font-size:500px; /* Czcionka w przycisku */
+    position: absolute;
+    top:250px;      /* Położenie przycisku w pionie */
+    left:50%;
+    transform: translate(-50%, 0%);
+  }
