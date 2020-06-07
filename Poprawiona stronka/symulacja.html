@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+  <head>
+
+      <meta charset="utf-8">
+      <title>Super strona www</title>
+
+      <meta name="description" content="Superowa stronka do superowej symulacji superowego rzutu ukośnego!">
+      <meta name="author" content="Super strona www squad">
+      
+      <link href="stronka.css" rel="stylesheet" type="text/css">
+     
+  </head>
+  <body>
+    
+  	<div id="naglowek">
+  		<h1>Superowa stronka dotycząca superowego rzutu ukośnego!</h1>
+    
+    	<ul>
+    		<a href="ostronie.html"><li>O stronie</li></a>
+    		<a href="symulacja.html"><li id="sym"><b>Symulacja rzutu</b></li></a>
+    		<a href="obliczenia.html"><li>Obliczenia</li></a>
+    	</ul>
+	</div>
+
+    <div id="velocityValue">
+      <label for="velocity">Prędkość wyrzutu</label><br>
+      <input id="v" name="velocity" size="10" maxlength="5">
+    </div>
+    
+    <div id="angleValue">
+      <label for="angle">Kąt wyrzutu</label><br>
+      <input id="ang" name="angle" size="10" maxlength="5">
+    </div>
+    
+    <div id="heightValue">
+      <label for="height">Wysokość wyrzutu</label><br>
+      <input id="h" name="height" size="10" maxlength="5">
+    </div>
+  
+      <input id="btn" type="button" value="Rzuuuć" onclick="rotateImg()">
+
+    <img src="działo2.png" id="dzialo" alt="" height="50">
+
+  <script>
+    // Deklarowanie dziala i obrazu dla js
+    const img = document.getElementById('dzialo')
+    const bttn = document.getElementById('btn')
+
+    function rotateImg() // Funkcja, która rotuje dzialo
+    {  
+      var angle_value = document.getElementById("ang").value; // Pobieranie wartości kąta z inputu
+      angle_value = (angle_value * -1) // Przeliczanie inputu na rzeczywisty kąt obrazu
+      img.style.transform = `rotate(${angle_value}deg)` // Przekręcanie obrazu o zadany kąt
+    }
+  </script>
+
+  </body>
+
+</html>

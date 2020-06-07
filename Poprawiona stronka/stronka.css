@@ -1,0 +1,81 @@
+h1
+  {
+    text-align: center;
+    min-width: 1800px;
+    padding: 18px;
+    margin: 0;
+    background-color: red;
+  }
+#naglowek
+  {
+    position: fixed;
+    height: 120px;
+    width: 100%;
+    margin: -10px -10px 0px -10px;
+    background-color: gray;
+    z-index: 1;
+  }
+ul
+  {
+    list-style: none;
+    border: 4px groove black;
+    min-width: 1800px;
+    margin: 0;
+    padding: 0;
+  }
+#sym
+  {
+     border-right: 4px groove black;
+     border-left: 4px groove black;  
+  }
+ul li
+  {
+    text-align: center;
+    font-size: 28px;
+    color: black;
+    display: inline-block;
+    padding: 5px 9px;
+    width: 32%;
+  }
+ul a:hover
+  {
+    font-weight: bold;
+  }
+#v, #ang, #h
+  {
+    font-size:30px;   /* Czcionka w polach danych */
+    text-align: center;
+  }
+#velocityValue, #angleValue, #heightValue
+  {
+    position: absolute;
+    top: 300px;        /* Położenie pól danych w pionie */
+    transform: translate(-50%, 0%);
+  }
+#velocityValue
+  {
+    left:24%;
+  }
+#angleValue
+  {
+    left:50%;
+  }
+#heightValue
+  {
+    left:76%;
+  }
+#btn
+  {
+    font-size:50px; /* Czcionka w przycisku */
+    position: absolute;
+    top:450px;      /* Położenie przycisku w pionie */
+    left:50%;
+    transform: translate(-50%, 0%);
+  }
+#dzialo
+  {
+    position: absolute;
+    top:800px;
+    left:23%;
+    transform: translate(-50%, 0%);
+  }
