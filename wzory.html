@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<title>Kalkulator rzutu ukośnego</title>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+.fa-anchor,.fa-coffee {font-size:200px}
+</style>
+
+<body>
+
+<!-- Pasek Menu -->
+<div class="w3-top">
+  <div class="w3-bar w3-yellow w3-card w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-yellow" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="index.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">O stronie</a>
+    <a href="obliczenia.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Obliczenia</a>
+    <a href="wzory.html" class="w3-bar-item w3-button w3-padding-large w3-white">Wzory</a>
+    <a href="kontakt.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Kontakt</a>
+  </div>
+
+  <!-- Pasek Menu na małe urządzenia -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+    <a href="index.html" class="w3-bar-item w3-button w3-padding-large">O stronie</a>
+    <a href="obliczenia.html" class="w3-bar-item w3-button w3-padding-large">Obliczenia</a>
+    <a href="wzory.html" class="w3-bar-item w3-button w3-padding-large">Wzory</a>
+    <a href="kontakt.html" class="w3-bar-item w3-button w3-padding-large">Kontakt</a>
+  </div>
+</div>
+
+<!-- Nagłówek -->
+<header class="w3-container w3-yellow w3-center" style="padding:128px 16px">
+  <h1 class="w3-margin w3-jumbo">Wzory</h1>
+  <p class="w3-xlarge">Kalkulator rzutu ukośnego</p>
+  <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top"><a href="obliczenia.html#obliczenia" style="text-decoration:none;">Policz !</a></button>
+</header>
+
+<!-- Pierwsza część -->
+<div class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-twothird">
+      <h1>Wzory wykorzystane w obliczeniach na stronie</h1>
+      <h5 class="w3-padding-32">
+        Dane: <br><br>
+        Prędkość początkowa ciała - &#957;<sub>0</sub> <br>
+        Kąt pod jakim wystrzelono ciało - &alpha; <br>
+        Wysokość z jakiej wyrzucono ciało - h<sub>0</sub>
+      </h5>
+
+      <p class="w3-text-grey">
+        Wektor &#957;<sub>0</sub> rozkładamy na dwa wektory składowe: <br>
+        wektor &#957;<sub>0Y</sub> w pionowej osi "y", <br>
+        oraz wektor &#957;<sub>0X</sub> w poziomej osi "x". <br><br>
+        Rzut rozpatrujemy w dwóch osiach.
+      </p>
+    </div>
+
+    <div class="w3-third w3-center">
+      <i class="fa fa-bar-chart w3-padding-64 w3-text-yellow" style="font-size:190px;"></i>
+    </div>
+  </div>
+</div>
+
+<!-- Druga część -->
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-third w3-center">
+      <i class="fa fa-pie-chart w3-padding-64 w3-text-yellow w3-margin-right" style="font-size:190px;"></i>
+    </div>
+
+    <div class="w3-twothird">
+      <h1>1. Ruch w pionowej osi "y"</h1>
+      <h5 class="w3-padding-32">Jest jednostajnie zmienny, ponieważ w pionie działa siła grawitacji, skierowana pionowo w dół, wywołująca przyspieszenie o wartości a = -g.</h5>
+
+      <p class="w3-text-grey">
+      Wartość wektora prędkości w osi pionowej „y”: <br>
+      sin &alpha; = <sup>&#957;<sub>0Y</sub></sup>&frasl;<sub>&#957;<sub>0</sub></sub> => &#957;<sub>0Y</sub> = &#957;<sub>0</sub> &times; sin &alpha; <br><br>
+
+      Ruch ten rozbijamy na dwa etapy: wznoszenie i spadek.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- Trzecia część -->
+<div class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-twothird">
+      <h1>Wznoszenie</h1>
+      <h5 class="w3-padding-32">
+        &#957;<sub>KW</sub> - prędkość końcowa wznoszenia <br>
+        t<sub>w</sub> - czas wznoszenia <br><br>
+        &#957;<sub>KW</sub> = &#957;<sub>0Y</sub> - gt<sub>w</sub> &nbsp; , gdzie &nbsp; &#957;<sub>KW</sub> = 0 &nbsp; => &nbsp; &#957;<sub>0Y</sub> = gt<sub>w</sub> <br>
+        t<sub>w</sub> = <sup>&#957;<sub>0Y</sub></sup>&frasl;<sub>g</sub> = <sup>&#957;<sub>0</sub> &times; sin &alpha;</sup>&frasl;<sub>g</sub> <br><br>
+        h<sub>w</sub> - wysokość na jaką wzniosło się ciało względem punkty wyrzutu/wystrzału <br><br>
+        h<sub>w</sub> = &#957;<sub>0Y</sub> &times; t<sub>w</sub> - gt<sub>w</sub><sup>2</sup> = &#957;<sub>0Y</sub> &times; <sup>&#957;<sub>0Y</sub></sup>&frasl;<sub>g</sub> - (<sup>g &times; &#957;<sub>0Y</sub><sup>2</sup></sup>&frasl;<sub>g<sup>2</sup></sub>) = <sup>(&#957;<sub>0</sub> &times; sin &alpha;)<sup>2</sup></sup>&frasl;<sub>2g</sub> <br><br>
+        h<sub>max</sub> = h<sub>0</sub> + h<sub>w</sub> = h<sub>0</sub> + <sup>(v<sub>0</sub> &times; sin &alpha;)<sup>2</sup></sup>&frasl;<sub>2g</sub>
+      </h5>
+
+      <p class="w3-text-grey">
+        
+      </p>
+    </div>
+
+    <div class="w3-third w3-center">
+      <i class="fa fa-line-chart w3-padding-64 w3-text-yellow" style="font-size:190px;"></i>
+    </div>
+  </div>
+</div>
+
+<!-- Czwarta część -->
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-third w3-center">
+      <i class="fa fa-area-chart w3-padding-64 w3-text-yellow w3-margin-right" style="font-size:190px;"></i>
+    </div>
+
+    <div class="w3-twothird">
+      <h1>Spadek</h1>
+      <h5 class="w3-padding-32">
+        h<sub>s</sub> - wysokość z jakiej ciało spadało <br>
+        t<sub>s</sub> - czas spadania <br><br>
+        h<sub>s</sub> = h<sub>max</sub> = <sup>gt<sub>s</sub><sup>2</sup></sup>&frasl;<sub>2</sub> <br>
+        t<sub>s</sub> = (<sup>2h<sub>max</sub></sup>&frasl;<sub>g</sub>)<sup><sup>1</sup>&frasl;<sub>2</sub></sup> = (<sup>2h<sub>0</sub></sup>&frasl;<sub>g</sub> + <sup>&#957;<sub>0Y</sub><sup>2</sup></sup>&frasl;<sub>g<sup>2</sup></sub>)<sup><sup>1</sup>&frasl;<sub>2</sub></sup> = [<sup>2h<sub>0</sub></sup>&frasl;<sub>g</sub> + <sup>(&#957;<sub>0</sub> &times; sin &alpha;)<sup>2</sup></sup>&frasl;<sub>g<sup>2</sup></sub>]<sup><sup>1</sup>&frasl;<sub>2</sub></sup> <br> <br>
+        v<sub>KY</sub> - prędkość w osi pionowej „y” z jaką ciało spadnie na ziemię <br> <br>
+        v<sub>KY</sub> = gt<sub>s</sub> = g(<sup>2h<sub>0</sub></sup>&frasl;<sub>g</sub> + <sup>v<sub>0Y</sub><sup>2</sup></sup>&frasl;<sub>g<sup>2</sup></sub>)<sup><sup>1</sup>&frasl;<sub>2</sub></sup> = (2h<sub>0</sub>g + v<sub>0Y</sub><sup>2</sup>)<sup><sup>1</sup>&frasl;<sub>2</sub></sup> = [2h<sub>0</sub>g + (v<sub>0</sub> &times; sin &alpha;)<sup>2</sup>]<sup><sup>1</sup>&frasl;<sub>2</sub></sup> <br><br>
+        v<sub>k</sub> - prędkość końcowa z jaką ciało spadnie na ziemię<br><br>
+        Z twierdzenia Pitagorasa: &nbsp; v<sub>KY</sub>^2 + v<sub>0X</sub>^2 = v<sub>k</sub>^2<br><br>
+        v<sub>k</sub>^2 = [(2h<sub>0</sub>g + (v<sub>0</sub> × sin &alpha;)<sup>2</sup>)<sup><sup>1</sup>⁄<sub>2</sub></sup>]<sup>2</sup> + (v<sub>0</sub> &times; cos &alpha;)<sup>2</sup><br>
+        v<sub>k</sub>^2 = 2h<sub>0</sub>g + v<sub>0</sub><sup>2</sup> × sin<sup>2</sup> &alpha; + v<sub>0</sub><sup>2</sup> &times; cos<sup>2</sup> &alpha;<br>
+        v<sub>k</sub>^2 = 2h<sub>0</sub>g + v<sub>0</sub><sup>2</sup> (sin<sup>2</sup> &alpha; + cos<sup>2</sup> &alpha;) = 2h<sub>0</sub>g + v<sub>0</sub><sup>2</sup> &times; 1<br>
+        v<sub>k</sub> = (2h<sub>0</sub>g + v<sub>0</sub><sup>2</sup>)<sup><sup>1</sup>⁄<sub>2</sub></sup><br><br>
+        t<sub>c</sub> - całkowity czas lotu <br>
+        t<sub>c</sub> = t<sub>w</sub> + t<sub>s</sub> = <sup>v<sub>0</sub> &times; sin &alpha;</sup>&frasl;<sub>g</sub> + [2h<sub>0</sub>g + (v<sub>0</sub> &times; sin &alpha;)<sup>2</sup>]<sup><sup>1</sup>&frasl;<sub>2</sub></sup>
+      </h5>
+
+      <p class="w3-text-grey"></p>
+    </div>
+  </div>
+</div>
+
+<!-- Piąta część -->
+<div class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-twothird">
+      <h1>2. Ruch w osi "x"</h1>
+      <h5 class="w3-padding-32">
+        Jest jednostajny, ponieważ w poziomie nie działają żadne siły.
+        Wartość wektora prędkości w osi poziomej „x”: <br><br>
+        cos &alpha; = <sup>v<sub>0X</sub></sup>&frasl;<sub>v<sub>0</sub></sub> &nbsp; => &nbsp; v<sub>0X</sub> = v<sub>0</sub> &times; cos &alpha; <br><br>
+        z - zasięg rzutu <br><br>
+        z = v<sub>0x</sub> * t<sub>c</sub> = v<sub>0</sub> &times; cos &alpha; &times; (<sup>v<sub>0</sub> &times; sin &alpha;</sup>&frasl;<sub>g</sub> + [2h<sub>0</sub>g + (v<sub>0</sub> &times; sin &alpha;)<sup>2</sup>]<sup><sup>1</sup>&frasl;<sub>2</sub></sup>)
+
+      </h5>
+
+      <p class="w3-text-grey">
+        
+      </p>
+    </div>
+
+    <div class="w3-third w3-center">
+      <i class="fa fa-bar-chart w3-padding-64 w3-text-yellow" style="font-size:190px;"></i>
+    </div>
+  </div>
+</div>
+
+<!-- Szósta część -->
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-third w3-center">
+      <i class="fa fa-pie-chart w3-padding-64 w3-text-yellow w3-margin-right" style="font-size:190px;"></i>
+    </div>
+
+    <div class="w3-twothird">
+      <h1>Równanie toru rzutu</h1>
+      <h5 class="w3-padding-32">x = v<sub>0X</sub> &times; t<sub>c</sub> = v<sub>0</sub> &times; cos &alpha; &times; t<sub>c</sub> &nbsp; => &nbsp; t<sub>c</sub> = <sup>x</sup>&frasl;<sub>v<sub>0</sub> &times; cos &alpha;</sub> <br><br>
+        y = h<sub>0</sub> + v<sub>0Y</sub>t<sub>c</sub> - <sup>gt<sub>c</sub><sup>2</sup></sup>&frasl;<sub>2</sub> = h<sub>0</sub> + v<sub>0</sub> &times; sin &alpha; &times; <sup>x</sup>&frasl;<sub>v<sub>0</sub> &times; cos &alpha;</sub> - g(<sup>x<sup>2</sup></sup>&frasl;<sub>v<sub>0</sub><sup>2</sup> &times; cos<sup>2</sup> &alpha;</sub>) &times; <sup>1</sup>&frasl;<sub>2</sub> = <br>
+        = h<sub>0</sub> &times; tan &alpha; &times; x - (<sup>g</sup>&frasl;<sub>2v<sub>0</sub> &times; cos<sup>2</sup> &alpha;</sub>)x<sup>2</sup>
+      </h5>
+
+      <p class="w3-text-grey"> Równanie przyjmuje postać równania kwadratowego, y = ax<sup>2</sup> + bx + c, więc tor rzutu jest parabolą.</p>
+    </div>
+  </div>
+</div>
+
+<div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+    <h1 class="w3-margin w3-xlarge">"Fizyka jest jak seks: pewnie, że może dawać jakieś praktyczne rezultaty, ale nie dlatego to robimy."<br>
+    <i>- Richard. P. Feynman</i>
+    </h1>
+</div>
+
+<!-- Stopka -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity">  
+ <p>Kalkulator rzutu ukośnego &nbsp; &#9679; &nbsp; I. Bareja, M. Cieszyński, K. Giżewska, K. Tokarski <i class="fa fa-copyright"></i> 2020</p>
+</footer>
+
+<script>
+// Kod na małe urządzenia
+  function myFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+      x.className += " w3-show";
+    } else { 
+      x.className = x.className.replace(" w3-show", "");
+    }
+  }
+</script>
+
+</body>
+</html>
+
