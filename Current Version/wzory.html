@@ -58,7 +58,9 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
       </h5>
 
       <p class="w3-text-grey">
-        Wektor &#957;<sub>0</sub> rozkładamy na dwa wektory składowe: wektor &#957;<sub>0Y</sub> w pionowej osi "y", oraz wektor &#957;<sub>0X</sub> w poziomej osi "x". <br>
+        Wektor &#957;<sub>0</sub> rozkładamy na dwa wektory składowe: <br>
+        wektor &#957;<sub>0Y</sub> w pionowej osi "y", <br>
+        oraz wektor &#957;<sub>0X</sub> w poziomej osi "x". <br><br>
         Rzut rozpatrujemy w dwóch osiach.
       </p>
     </div>
@@ -102,7 +104,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
         t<sub>w</sub> = <sup>&#957;<sub>0Y</sub></sup>&frasl;<sub>g</sub> = <sup>&#957;<sub>0</sub> &times; sin &alpha;</sup>&frasl;<sub>g</sub> <br><br>
         h<sub>w</sub> - wysokość na jaką wzniosło się ciało względem punkty wyrzutu/wystrzału <br><br>
         h<sub>w</sub> = &#957;<sub>0Y</sub> &times; t<sub>w</sub> - gt<sub>w</sub><sup>2</sup> = &#957;<sub>0Y</sub> &times; <sup>&#957;<sub>0Y</sub></sup>&frasl;<sub>g</sub> - (<sup>g &times; &#957;<sub>0Y</sub><sup>2</sup></sup>&frasl;<sub>g<sup>2</sup></sub>) = <sup>(&#957;<sub>0</sub> &times; sin &alpha;)<sup>2</sup></sup>&frasl;<sub>2g</sub> <br><br>
-        h<sub>max</sub> = h<sub>0</sub> + <sup>v<sub>0Y</sub><sup>2</sup></sup>&frasl;<sub>2g</sub> = h<sub>0</sub> + <sup>(v<sub>0</sub> &times; sin &alpha;)<sup>2</sup></sup>&frasl;<sub>2g</sub>
+        h<sub>max</sub> = h<sub>0</sub> + h<sub>w</sub> = h<sub>0</sub> + <sup>(v<sub>0</sub> &times; sin &alpha;)<sup>2</sup></sup>&frasl;<sub>2g</sub>
       </h5>
 
       <p class="w3-text-grey">
@@ -129,12 +131,16 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
         h<sub>s</sub> - wysokość z jakiej ciało spadało <br>
         t<sub>s</sub> - czas spadania <br><br>
         h<sub>s</sub> = h<sub>max</sub> = <sup>gt<sub>s</sub><sup>2</sup></sup>&frasl;<sub>2</sub> <br>
-        t<sub>s</sub> = (<sup>2h<sub>max</sub></sup>&frasl;<sub>g</sub>)<sup><sup>1</sup>&frasl;<sub>2</sub></sup> = (<sup>2h<sub>0</sub></sup>&frasl;<sub>g</sub> + <sup>&#957;<sub>0Y</sub><sup>2</sup></sup>&frasl;<sub>g<sup>2</sup></sub>)<sup><sup>1</sup>&frasl;<sub>2</sub></sup> = <br>
-        = [<sup>2h<sub>0</sub></sup>&frasl;<sub>g</sub> + <sup>(&#957;<sub>0</sub> &times; sin &alpha;)<sup>2</sup></sup>&frasl;<sub>g<sup>2</sup></sub>]<sup><sup>1</sup>&frasl;<sub>2</sub></sup> <br> <br>
+        t<sub>s</sub> = (<sup>2h<sub>max</sub></sup>&frasl;<sub>g</sub>)<sup><sup>1</sup>&frasl;<sub>2</sub></sup> = (<sup>2h<sub>0</sub></sup>&frasl;<sub>g</sub> + <sup>&#957;<sub>0Y</sub><sup>2</sup></sup>&frasl;<sub>g<sup>2</sup></sub>)<sup><sup>1</sup>&frasl;<sub>2</sub></sup> = [<sup>2h<sub>0</sub></sup>&frasl;<sub>g</sub> + <sup>(&#957;<sub>0</sub> &times; sin &alpha;)<sup>2</sup></sup>&frasl;<sub>g<sup>2</sup></sub>]<sup><sup>1</sup>&frasl;<sub>2</sub></sup> <br> <br>
         v<sub>KY</sub> - prędkość w osi pionowej „y” z jaką ciało spadnie na ziemię <br> <br>
-        v<sub>KY</sub> = gt<sub>s</sub> = g(<sup>2h<sub>0</sub></sup>&frasl;<sub>g</sub> + <sup>v<sub>0Y</sub><sup>2</sup></sup>&frasl;<sub>g<sup>2</sup></sub>)<sup><sup>1</sup>&frasl;<sub>2</sub></sup> = (2h<sub>0</sub>g + v<sub>0Y</sub><sup>2</sup>)<sup><sup>1</sup>&frasl;<sub>2</sub></sup> = <br>
-        = [2h<sub>0</sub>g + (v<sub>0</sub> &times; sin &alpha;)<sup>2</sup>]<sup><sup>1</sup>&frasl;<sub>2</sub></sup> <br><br>
-        t<sub>c</sub> - całkowity czas lotu <br><br>
+        v<sub>KY</sub> = gt<sub>s</sub> = g(<sup>2h<sub>0</sub></sup>&frasl;<sub>g</sub> + <sup>v<sub>0Y</sub><sup>2</sup></sup>&frasl;<sub>g<sup>2</sup></sub>)<sup><sup>1</sup>&frasl;<sub>2</sub></sup> = (2h<sub>0</sub>g + v<sub>0Y</sub><sup>2</sup>)<sup><sup>1</sup>&frasl;<sub>2</sub></sup> = [2h<sub>0</sub>g + (v<sub>0</sub> &times; sin &alpha;)<sup>2</sup>]<sup><sup>1</sup>&frasl;<sub>2</sub></sup> <br><br>
+        v<sub>k</sub> - prędkość końcowa z jaką ciało spadnie na ziemię<br><br>
+        Z twierdzenia Pitagorasa: &nbsp; v<sub>KY</sub>^2 + v<sub>0X</sub>^2 = v<sub>k</sub>^2<br><br>
+        v<sub>k</sub>^2 = [(2h<sub>0</sub>g + (v<sub>0</sub> × sin &alpha;)<sup>2</sup>)<sup><sup>1</sup>⁄<sub>2</sub></sup>]<sup>2</sup> + (v<sub>0</sub> &times; cos &alpha;)<sup>2</sup><br>
+        v<sub>k</sub>^2 = 2h<sub>0</sub>g + v<sub>0</sub><sup>2</sup> × sin<sup>2</sup> &alpha; + v<sub>0</sub><sup>2</sup> &times; cos<sup>2</sup> &alpha;<br>
+        v<sub>k</sub>^2 = 2h<sub>0</sub>g + v<sub>0</sub><sup>2</sup> (sin<sup>2</sup> &alpha; + cos<sup>2</sup> &alpha;) = 2h<sub>0</sub>g + v<sub>0</sub><sup>2</sup> &times; 1<br>
+        v<sub>k</sub> = (2h<sub>0</sub>g + v<sub>0</sub><sup>2</sup>)<sup><sup>1</sup>⁄<sub>2</sub></sup><br><br>
+        t<sub>c</sub> - całkowity czas lotu <br>
         t<sub>c</sub> = t<sub>w</sub> + t<sub>s</sub> = <sup>v<sub>0</sub> &times; sin &alpha;</sup>&frasl;<sub>g</sub> + [2h<sub>0</sub>g + (v<sub>0</sub> &times; sin &alpha;)<sup>2</sup>]<sup><sup>1</sup>&frasl;<sub>2</sub></sup>
       </h5>
 
@@ -178,11 +184,11 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
     <div class="w3-twothird">
       <h1>Równanie toru rzutu</h1>
       <h5 class="w3-padding-32">x = v<sub>0X</sub> &times; t<sub>c</sub> = v<sub>0</sub> &times; cos &alpha; &times; t<sub>c</sub> &nbsp; => &nbsp; t<sub>c</sub> = <sup>x</sup>&frasl;<sub>v<sub>0</sub> &times; cos &alpha;</sub> <br><br>
-        y = h<sub>0</sub> + v<sub>0Y</sub>t<sub>c</sub> - <sup>gt<sub>c</sub><sup>2</sup></sup>&frasl;<sub>2</sub> = h<sub>0</sub> + <sup>v<sub>0</sub> &times; sin &alpha; &times; x</sup>&frasl;<sub>v<sub>0</sub> &times; cos &alpha;</sub> - g(<sup>x<sup>2</sup></sup>&frasl;<sub>v<sub>0</sub><sup>2</sup> &times; cos<sup>2</sup> &alpha;</sub>) &times; <sup>1</sup>&frasl;<sub>2</sub> = <br>
+        y = h<sub>0</sub> + v<sub>0Y</sub>t<sub>c</sub> - <sup>gt<sub>c</sub><sup>2</sup></sup>&frasl;<sub>2</sub> = h<sub>0</sub> + v<sub>0</sub> &times; sin &alpha; &times; <sup>x</sup>&frasl;<sub>v<sub>0</sub> &times; cos &alpha;</sub> - g(<sup>x<sup>2</sup></sup>&frasl;<sub>v<sub>0</sub><sup>2</sup> &times; cos<sup>2</sup> &alpha;</sub>) &times; <sup>1</sup>&frasl;<sub>2</sub> = <br>
         = h<sub>0</sub> &times; tan &alpha; &times; x - (<sup>g</sup>&frasl;<sub>2v<sub>0</sub> &times; cos<sup>2</sup> &alpha;</sub>)x<sup>2</sup>
       </h5>
 
-      <p class="w3-text-grey"> Równanie przyjmuje postać równania kwadratowego, y = ax<sup>2</sup> + bx + c, tor rzutu jest parabolą.</p>
+      <p class="w3-text-grey"> Równanie przyjmuje postać równania kwadratowego, y = ax<sup>2</sup> + bx + c, więc tor rzutu jest parabolą.</p>
     </div>
   </div>
 </div>

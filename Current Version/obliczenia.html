@@ -51,11 +51,9 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
   <div class="w3-content">
     <div class="w3-twothird">
       <h1>Wykonaj obliczenia</h1>
-      <h5 class="w3-padding-32">Poniżej znajduję się</h5>
+      <h5 class="w3-padding-32">Poniżej znajduję się kalkulator parametrów rzutu bocznego. Aby wykonać obliczenia wpisz dane w wyznaczonych rubrykach. Pamiętaj, aby wprowadzane przez Ciebie wielkości były podane we właściwych jednostkach, czyli odpowiednio metrach na sekundę, stopniach lub metrach. Następnie naciśnij przycisk „Rzuuuć!”, a wtedy wszystko policzymy za Ciebie.*</h5>
 
-      <p class="w3-text-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-        laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <p class="w3-text-grey">* Wyniki zostaną wyświetlone za pomocą kodu javascript, więc dla prawidłowego działania strony upewnij się, że Twoja przeglądarka nie blokuje wykonywania skryptów js.</p>
     </div>
 
     <div class="w3-third w3-center">
@@ -103,8 +101,13 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
     		  var tc = ((vel*Math.sin(ang)+Math.sqrt((vel*Math.sin(ang))**2+2*g*ho))/g).toFixed(3);
     		  var hmax = (1*ho+((vel**2)*((Math.sin(ang))**2)/(2*g))).toFixed(3);
     		  var range = (vel*Math.cos(ang)*tc).toFixed(3);
+          var vk = (Math.sqrt(2*ho*g + vel**2)).toFixed(3);
 
-          alert("Całkowity czas lotu wynosi: "+tc+" s\nMaksymalna wysokość lotu wynosi: "+hmax+" m\nZasięg rzutu wynosi: "+range+" m");
+          var a = ((g / 2*vel) * Math.cos(ang)**2).toFixed(3);
+          var b = (Math.tan(ang)).toFixed(3);
+          var c = ho;
+
+          alert("Prędkość końcowa wynosi: "+vk+" m/s\nCałkowity czas lotu wynosi: "+tc+" s\nMaksymalna wysokość lotu wynosi: "+hmax+" m\nZasięg rzutu wynosi: "+range+" m\nRównanie toru rzutu: y="+a+"x + "+b+"x + "+c);
         }
 
       </script>
