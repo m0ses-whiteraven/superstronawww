@@ -102,7 +102,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
         t<sub>w</sub> - czas wznoszenia <br><br>
         &#957;<sub>KW</sub> = &#957;<sub>0Y</sub> - gt<sub>w</sub> &nbsp; , gdzie &nbsp; &#957;<sub>KW</sub> = 0 &nbsp; => &nbsp; &#957;<sub>0Y</sub> = gt<sub>w</sub> <br>
         t<sub>w</sub> = <sup>&#957;<sub>0Y</sub></sup>&frasl;<sub>g</sub> = <sup>&#957;<sub>0</sub> &times; sin &alpha;</sup>&frasl;<sub>g</sub> <br><br>
-        h<sub>w</sub> - wysokość na jaką wzniosło się ciało względem punkty wyrzutu/wystrzału <br><br>
+        h<sub>w</sub> - wysokość na jaką wzniosło się ciało względem punkty wyrzutu <br><br>
         h<sub>w</sub> = &#957;<sub>0Y</sub> &times; t<sub>w</sub> - gt<sub>w</sub><sup>2</sup> = &#957;<sub>0Y</sub> &times; <sup>&#957;<sub>0Y</sub></sup>&frasl;<sub>g</sub> - (<sup>g &times; &#957;<sub>0Y</sub><sup>2</sup></sup>&frasl;<sub>g<sup>2</sup></sub>) = <sup>(&#957;<sub>0</sub> &times; sin &alpha;)<sup>2</sup></sup>&frasl;<sub>2g</sub> <br><br>
         h<sub>max</sub> = h<sub>0</sub> + h<sub>w</sub> = h<sub>0</sub> + <sup>(v<sub>0</sub> &times; sin &alpha;)<sup>2</sup></sup>&frasl;<sub>2g</sub>
       </h5>
@@ -135,10 +135,10 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
         v<sub>KY</sub> - prędkość w osi pionowej „y” z jaką ciało spadnie na ziemię <br> <br>
         v<sub>KY</sub> = gt<sub>s</sub> = g(<sup>2h<sub>0</sub></sup>&frasl;<sub>g</sub> + <sup>v<sub>0Y</sub><sup>2</sup></sup>&frasl;<sub>g<sup>2</sup></sub>)<sup><sup>1</sup>&frasl;<sub>2</sub></sup> = (2h<sub>0</sub>g + v<sub>0Y</sub><sup>2</sup>)<sup><sup>1</sup>&frasl;<sub>2</sub></sup> = [2h<sub>0</sub>g + (v<sub>0</sub> &times; sin &alpha;)<sup>2</sup>]<sup><sup>1</sup>&frasl;<sub>2</sub></sup> <br><br>
         v<sub>k</sub> - prędkość końcowa z jaką ciało spadnie na ziemię<br><br>
-        Z twierdzenia Pitagorasa: &nbsp; v<sub>KY</sub>^2 + v<sub>0X</sub>^2 = v<sub>k</sub>^2<br><br>
-        v<sub>k</sub>^2 = [(2h<sub>0</sub>g + (v<sub>0</sub> × sin &alpha;)<sup>2</sup>)<sup><sup>1</sup>⁄<sub>2</sub></sup>]<sup>2</sup> + (v<sub>0</sub> &times; cos &alpha;)<sup>2</sup><br>
-        v<sub>k</sub>^2 = 2h<sub>0</sub>g + v<sub>0</sub><sup>2</sup> × sin<sup>2</sup> &alpha; + v<sub>0</sub><sup>2</sup> &times; cos<sup>2</sup> &alpha;<br>
-        v<sub>k</sub>^2 = 2h<sub>0</sub>g + v<sub>0</sub><sup>2</sup> (sin<sup>2</sup> &alpha; + cos<sup>2</sup> &alpha;) = 2h<sub>0</sub>g + v<sub>0</sub><sup>2</sup> &times; 1<br>
+        Z twierdzenia Pitagorasa: &nbsp; v<sub>KY</sub><sup>2</sup> + v<sub>0X</sub><sup>2</sup> = v<sub>k</sub><sup>2</sup><br><br>
+        v<sub>k</sub><sup>2</sup> = [(2h<sub>0</sub>g + (v<sub>0</sub> × sin &alpha;)<sup>2</sup>)<sup><sup>1</sup>⁄<sub>2</sub></sup>]<sup>2</sup> + (v<sub>0</sub> &times; cos &alpha;)<sup>2</sup><br>
+        v<sub>k</sub><sup>2</sup> = 2h<sub>0</sub>g + v<sub>0</sub><sup>2</sup> × sin<sup>2</sup> &alpha; + v<sub>0</sub><sup>2</sup> &times; cos<sup>2</sup> &alpha;<br>
+        v<sub>k</sub><sup>2</sup> = 2h<sub>0</sub>g + v<sub>0</sub><sup>2</sup> (sin<sup>2</sup> &alpha; + cos<sup>2</sup> &alpha;) = 2h<sub>0</sub>g + v<sub>0</sub><sup>2</sup> &times; 1<br>
         v<sub>k</sub> = (2h<sub>0</sub>g + v<sub>0</sub><sup>2</sup>)<sup><sup>1</sup>⁄<sub>2</sub></sup><br><br>
         t<sub>c</sub> - całkowity czas lotu <br>
         t<sub>c</sub> = t<sub>w</sub> + t<sub>s</sub> = <sup>v<sub>0</sub> &times; sin &alpha;</sup>&frasl;<sub>g</sub> + [2h<sub>0</sub>g + (v<sub>0</sub> &times; sin &alpha;)<sup>2</sup>]<sup><sup>1</sup>&frasl;<sub>2</sub></sup>
@@ -158,13 +158,13 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
         Jest jednostajny, ponieważ w poziomie nie działają żadne siły.
       </h5>
 
-      <p class="w3-text-grey">Wartość wektora prędkości w osi poziomej „x”: <br><br>
+      <p class="w3-text-grey">Wartość wektora prędkości w osi poziomej „x”: <br>
         cos &alpha; = <sup>v<sub>0X</sub></sup>&frasl;<sub>v<sub>0</sub></sub> &nbsp; => &nbsp; v<sub>0X</sub> = v<sub>0</sub> &times; cos &alpha;
       </p>
 
       <h5 class="w3-padding-32">
         z - zasięg rzutu <br><br>
-        z = v<sub>0x</sub> * t<sub>c</sub> = v<sub>0</sub> &times; cos &alpha; &times; (<sup>v<sub>0</sub> &times; sin &alpha;</sup>&frasl;<sub>g</sub> + [2h<sub>0</sub>g + (v<sub>0</sub> &times; sin &alpha;)<sup>2</sup>]<sup><sup>1</sup>&frasl;<sub>2</sub></sup>)
+        z = v<sub>0x</sub> &times; t<sub>c</sub> = v<sub>0</sub> &times; cos &alpha; &times; (<sup>v<sub>0</sub> &times; sin &alpha;</sup>&frasl;<sub>g</sub> + [2h<sub>0</sub>g + (v<sub>0</sub> &times; sin &alpha;)<sup>2</sup>]<sup><sup>1</sup>&frasl;<sub>2</sub></sup>)
       </h5>
     </div>
 
