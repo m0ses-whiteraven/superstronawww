@@ -73,13 +73,13 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
         <form class="w3-container" name="formcalc">
 
         <label class="w3-text-red"><b>Prędkość początkowa [<sup>m</sup>&frasl;<sub>s</sub>]:</b></label>
-        <input class="w3-input w3-border w3-round" type="text" id="velocity" maxlength="4">
+        <input class="w3-input w3-border w3-round" type="text" id="velocity" maxlength="5">
          
         <label class="w3-text-red"><b>Kąt [&deg;]:</b></label>
         <input class="w3-input w3-border w3-round" type="text" id="angle" maxlength="2">
 
         <label class="w3-text-red"><b>Wysokość [m]:</b></label>
-        <input class="w3-input w3-border w3-round" type="text" id="height" maxlength="3">
+        <input class="w3-input w3-border w3-round" type="text" id="height" maxlength="5">
 
         <br>
 
@@ -89,25 +89,54 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 
       <script type="text/javascript">
 
-        function calcAll() {
+        function calcAll() 
+        {
+          	var g = 9.81;
+          	var vel = document.getElementById("velocity").value;
+          	var angdeg = document.getElementById("angle").value;
+          	var ho = document.getElementById("height").value;
+          	if(vel.includes(",") || angdeg.includes(",") || ho.includes(","))
+          	{
+          		alert("W zapisie ułamków dziesiętnych używaj kropki.")
+          	}
+          	else
+          	{
+          		if(angdeg<0 || angdeg>90)
+          		{
+          			alert("Wartość kąta wyrzutu musi zawierać się w przedziale <0, 90>.")
+          		}
+          		else
+          		{
+	        		var ang = angdeg*Math.PI/180;
+    		  		var tc = ((vel*Math.sin(ang)+Math.sqrt((vel*Math.sin(ang))**2+2*g*ho))/g).toFixed(3);
+    		  	
+    		  		if(vel>0)
+    		  		{
+    		  			var hmax = (1*ho+((vel**2)*((Math.sin(ang))**2)/(2*g))).toFixed(3);
+    		  		}
+    		  	
+    		  		else
+    		  		{
+    		  			var hmax = ho
+    		  		}
+    		  	
+    		  		var range = (vel*Math.cos(ang)*tc).toFixed(3);
+          			var vk = (Math.sqrt(2*ho*g + vel**2)).toFixed(3);
 
-          var g = 9.81;
-
-          var vel = document.getElementById("velocity").value;
-          var angdeg = document.getElementById("angle").value;
-	        var ang = angdeg*Math.PI/180;
-          var ho = document.getElementById("height").value;
-
-    		  var tc = ((vel*Math.sin(ang)+Math.sqrt((vel*Math.sin(ang))**2+2*g*ho))/g).toFixed(3);
-    		  var hmax = (1*ho+((vel**2)*((Math.sin(ang))**2)/(2*g))).toFixed(3);
-    		  var range = (vel*Math.cos(ang)*tc).toFixed(3);
-          var vk = (Math.sqrt(2*ho*g + vel**2)).toFixed(3);
-
-          var a = ((g / 2*vel) * Math.cos(ang)**2).toFixed(3);
-          var b = (Math.tan(ang)).toFixed(3);
-          var c = ho;
-
-          alert("Prędkość końcowa wynosi: "+vk+" m/s\nCałkowity czas lotu wynosi: "+tc+" s\nMaksymalna wysokość lotu wynosi: "+hmax+" m\nZasięg rzutu wynosi: "+range+" m\nRównanie toru rzutu: y="+a+"x + "+b+"x + "+c);
+          			var a = (g / (2*(vel**2)*(Math.cos(ang)**2))).toFixed(8);
+          			var b = (Math.tan(ang)).toFixed(3);
+          			var c = ho;
+          		
+          			if(angdeg == 90)
+          			{
+          				alert("Prędkość końcowa wynosi: "+vk+" m/s\nCałkowity czas lotu wynosi: "+tc+" s\nMaksymalna wysokość lotu wynosi: "+hmax+" m\nZasięg rzutu wynosi: "+range+" m");
+          			}
+          			else
+          			{
+          				alert("Prędkość końcowa wynosi: "+vk+" m/s\nCałkowity czas lotu wynosi: "+tc+" s\nMaksymalna wysokość lotu wynosi: "+hmax+" m\nZasięg rzutu wynosi: "+range+" m\nRównanie toru rzutu: y= -"+a+"x^2 + "+b+"x + "+c);
+          			}
+          		}
+     	 	}
         }
 
       </script>
